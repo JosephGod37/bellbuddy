@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { Student } from './App';
+import type {Student} from './App';
 
 interface Props {
     student: Student;

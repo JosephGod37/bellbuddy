@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import Clock from './Clock';
+import StudentList from './StudentList';
+import AddStudentForm from './AddStudentForm';
 
 export interface Student {
     id: number;
@@ -41,9 +43,10 @@ const App: React.FC = () => {
     return (
         <div style={{ fontFamily: 'Arial', padding: 20 }}>
             <h1>BellBuddy</h1>
-
+            <Clock />
             <h3>Obecnych: {presentCount} / {students.length}</h3>
-
+            <AddStudentForm onAdd={addStudent} />
+            <StudentList students={students} onToggle={toggleAttendance} />
         </div>
     );
 };
